@@ -1,14 +1,14 @@
 
 function showResult(res1,res2,e){
     var equation;
-    equation = e.elements[0].value + "x\262 + " + e.elements[1].value + "x + " + e.elements[2].value + " = 0";
+    equation = e.elements[1].value + "x\262 + " + e.elements[2].value + "x + " + e.elements[3].value + " = 0";
     if ((undefined === res1) || ( isNaN(res1)))
     {
         alert(equation + " No results");
     }
     else{
         var text;
-        text = "\n x  = " + res1 +" OR x = " + res2;
+        text = "\n X  = " + res1 +" or X = " + res2;
         alert(equation + " " + text);
     }
 }
@@ -27,7 +27,7 @@ function showResult(res1,res2,e){
 
 function showEquation(x){
     var text;
-    text = x.elements[0].value + "x<sup>2</sup> + " + x.elements[1].value + "x + " + x.elements[2].value + " = 0";
+    text = x.elements[1].value + "x<sup>2</sup> + " + x.elements[2].value + "x + " + x.elements[3].value + " = 0";
     document.getElementById("Equation").innerHTML = text;
 }
 
@@ -35,9 +35,9 @@ function Calculate(){
     var x = document.getElementById("getequation");
    // showEquation(x);
     var x1,x2;
-    var a = x.elements[0].value;
-    var b = x.elements[1].value;
-    var c = x.elements[2].value;
+    var a = x.elements[1].value;
+    var b = x.elements[2].value;
+    var c = x.elements[3].value;
     x1= ( -b + Math.sqrt(b * b - 4 * a * c) )/(2 * a);
     x2= ( -b - Math.sqrt(b * b - 4 * a * c) )/(2 * a);
     showResult(x1, x2, x);

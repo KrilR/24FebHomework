@@ -2,23 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style/index.css" media="screen" />
     <title>Document</title>
 </head>
 <body>
- <form id="getequation" method="post" />
- Quadratic equation:<br><br>
-  <input type="text"  name="1stargument"  pattern="^[0-9]">
-  <h3>x<sup>2</sup></h3>
-  <input type="text"  name="2ndargument" pattern="^[0-9]">
-<h3>x</h3>
-  <input type="text"  name="3rdargument"  pattern="^[0-9]">
-  <br><br>
-<button onclick="Calculate()">Calculate</button>
-</form> 
-
-<p id ="Equation"></p>
-<p id="Result"></p>
-<script type="text/javascript" src="js/index.js"></script>
-
+    <section >
+         <form id="getequation" method="post" onsubmit="Calculate()"/>
+             <!--<fieldset class="container">
+                <legend><h1>Quadratic equation:</h1></legend>
+                <label>
+                    <input type="text" name="1stargument" size="20p" required pattern="^-?\d+(\.\d+)?$">
+                    x<sup>2</sup>
+                </label>
+                <label>
+                    <input type="text" name="2stargument" required pattern="^[0-9]*$">
+                    x<sup>1</sup>
+                </label>
+                <label>
+                    <input type="text" name="3rdargument" required pattern="^[0-9]*$">
+                </label>
+                <br><br>
+                <input type="submit"/>
+             </fieldset>--->
+                          <fieldset>
+                <legend><h1>Quadratic equation:</h1></legend>
+                <div  class="container">
+                <div>
+                    <label>
+                        <input type="text" name="1stargument" required pattern="^-?\d+(\.\d+)?$">
+                        x<sup>2 </sup>+
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="text" name="2stargument" required pattern="^-?\d+(\.\d+)?$">
+                        x<sup>1 </sup>+
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="text" name="3rdargument" required pattern="^-?\d+(\.\d+)?$">
+                     = 0 </label>
+                     </div>
+                </div>
+                <br>
+                <input type="submit" id="calaculeteButton"/>
+             </fieldset>
+        </form> 
+        <!--<p id ="Equation"></p>-->
+        <p id="Result"></p>
+        </section>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>

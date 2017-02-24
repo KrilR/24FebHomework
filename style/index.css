@@ -1,0 +1,25 @@
+fieldset {
+  margin:5vh 35vw;
+  width: 30vw;
+  
+}
+
+.container {
+    width: 30vw;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.container label{
+      margin-right: 10px;
+      width: 50px;
+}
+.container input{
+    width: 70px;
+}
+#calaculeteButton{
+    float:right;
+    width: 100px;
+}
