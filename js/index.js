@@ -26,17 +26,7 @@ function showResult1(res2,e){
         alert(equation + " " + text);
     }
 }
-/*function showResult(res1,res2){
-    if (undefined == res1)
-    {
-        document.getElementById("Result").innerHTML = "No results";
-    }
-    else{
-        var text;
-        text = "x <sub>1</sub> = " + res1 +"; x <sub>2</sub> = " + res2;
-        document.getElementById("Result").innerHTML = text;
-    }
-}*/
+
 
 function showEquation(x){
     var text;
