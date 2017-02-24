@@ -1,5 +1,5 @@
 
-function showResult(res1,res2,e){
+function showResult2(res1,res2,e){
     var equation;
     equation = e.elements[1].value + "x\262 + " + e.elements[2].value + "x + " + e.elements[3].value + " = 0";
     if ((undefined === res1) || ( isNaN(res1)))
@@ -13,6 +13,19 @@ function showResult(res1,res2,e){
     }
 }
 
+function showResult1(res2,e){
+    var equation;
+    equation = e.elements[2].value + "x + " + e.elements[3].value + " = 0";
+    if ((undefined === res2) || ( isNaN(res2)))
+    {
+        alert(equation + " No results");
+    }
+    else{
+        var text;
+        text = "\n X  = " + res2;
+        alert(equation + " " + text);
+    }
+}
 /*function showResult(res1,res2){
     if (undefined == res1)
     {
@@ -38,7 +51,14 @@ function Calculate(){
     var a = x.elements[1].value;
     var b = x.elements[2].value;
     var c = x.elements[3].value;
+    if (a==0){
+        x1=(-c/b);
+        showResult1(x1,x);
+    }
+    else{
     x1= ( -b + Math.sqrt(b * b - 4 * a * c) )/(2 * a);
     x2= ( -b - Math.sqrt(b * b - 4 * a * c) )/(2 * a);
-    showResult(x1, x2, x);
+    showResult2(x1, x2, x);
+        
+    }
 }
