@@ -17,7 +17,8 @@ fieldset {
       width: 50px;
 }
 .container input{
-    width: 70px;
+    min-width: 30px;
+    max-width: 70px;
 }
 #calaculeteButton{
     float:right;
